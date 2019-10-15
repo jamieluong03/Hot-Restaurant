@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tables Page</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+
+  </div>
+
+</body>
+
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
+<script type="text/javascript">
+
+  // In this code, jQuery is used to "download" the data from our server
+  // We then dynamically display this content in our table. This is very similar to the group projects you just completed.
+  // It's also very similar to the NYT search application. In fact, I copied a ton of code from there.
+
+
+  // This function resets all of the data in our tables. This is intended to let you restart a demo.
+  function clearTable() {
+    alert("Clearing...");
+
+    // Clear the tables on the server and then empty the elements on the client
+    $.ajax({ url: "/api/clear", method: "POST" }).then(function() {
+      $("#waitList").empty();
+      $("#tableList").empty();
+    });
+  }
+
+  $("#clear").on("click", clearTable);
+
+
+  // Run Queries!
+  // ==========================================
+  getTableData();
+  getWaitlistData();
+
+
+</script>
+
+</html>
