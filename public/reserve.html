@@ -86,14 +86,15 @@
 
   $(".submit").on("click", function(event) {
     event.preventDefault();
-    var userInfo = {
-        name: $("#name").val().trim(),
-        pho: $("#role").val().trim(),
-        age: $("#age").val().trim(),
-        forcePoints: $("#force-points").val().trim()
-      };
+    var newReservation = {
+       customerName: $("#reserve-name").val().trim(),
+       phoneNamber: $("#reserve-phone").val().trim(),
+       customerEmail: $("#reserve-email").val().trim(),
+       customerId: $("#reserve-unique-id").val().trim(),
+      }
+    })
     
-
+    console.log(newReservation);
 
     // Here we grab the form elements
 
@@ -104,6 +105,16 @@
 
     $.post("/api/tables", newReservation,
       function(data) {
+        if(data){
+          alert("YAY!! You are officially booked!") 
+        }else{
+          alert("SORRY! You are on the waitlist")
+        }
+        $("#eserve-name").val("");
+        $("#reserve-phone").val("");
+        $("#reserve-email").val("");
+        $("#reserve-unique-id").val("");
+
 
         // If a table is available... tell user they are booked.
 
