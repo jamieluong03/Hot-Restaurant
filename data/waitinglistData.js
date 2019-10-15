@@ -6,8 +6,12 @@
 // ===============================================================================
 
 var waitingList = [
-    {
-    }
-  ];
+  {
+    customerName: "Jamie",
+    customerEmail: "jamie@example.com",
+    customerID: "123",
+    phoneNumber: "123-123-123"
+  }
+];
 // Note how we export the array. This makes it accessible to other files using require.
 module.exports = waitingList;
