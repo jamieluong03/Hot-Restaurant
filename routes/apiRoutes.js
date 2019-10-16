@@ -36,16 +36,14 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
   app.post("/api/tables", function(req, res){
     var newCustomer = req.body;
-    tableData.push(newCustomer);
-    res.json(newCustomer);
 
     if (tableData.length > 5){
-      app.post("/api/waitlist", function(req, res){
-        var newWait = req.body;
-        waitListData.push(newWait);
-        res.json(newWait);
-      });
-    };
+        waitListData.push(newCustomer);
+    } else {
+      tableData.push(newCustomer);
+    }
+    res.json(newCustomer);
+
   });
 
   // ---------------------------------------------------------------------------
