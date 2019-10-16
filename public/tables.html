@@ -83,10 +83,10 @@
       listItem.append(
         $("<h2>").text("Table #" + (i + 1)),
         $("<hr>"),
-        $("<h2>").text("ID: " + tableData[i].customerID),
+        $("<h2>").text("ID: " + tableData[i].customerId),
         $("<h2>").text("Name: " + tableData[i].customerName),
         $("<h2>").text("Email: " + tableData[i].customerEmail),
-        $("<h2>").text("Phone: " + tableData[i].phoneNumber)
+        $("<h2>").text("Phone: " + tableData[i].phoneNamber)
       );
 
       tableList.append(listItem);
@@ -104,10 +104,10 @@
         listCustomer.append(
           $("<h2>").text("Table #" + (i + 1)),
           $("<hr>"),
-          $("<h2>").text("ID: " + waitinglistData[i].customerID),
+          $("<h2>").text("ID: " + waitinglistData[i].customerId),
           $("<h2>").text("Name: " + waitinglistData[i].customerName),
           $("<h2>").text("Email: " + waitinglistData[i].customerEmail),
-          $("<h2>").text("Phone: " + waitinglistData[i].phoneNumber)
+          $("<h2>").text("Phone: " + waitinglistData[i].phoneNamber)
         );
         waitList.append(listCustomer);
       }
