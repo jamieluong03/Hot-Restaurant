@@ -76,7 +76,7 @@
   function getTableData(){
     $.get("/api/tables", function(tableData){
 
-      for (var i = 0; i < tableData.length-1; i++) {
+      for (var i = 0; i < tableData.length; i++) {
       var tableList = $("#tableList");
       var listItem = $("<li class='list-group-item mt-4'>");
 

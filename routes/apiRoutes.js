@@ -37,10 +37,12 @@ module.exports = function(app) {
   app.post("/api/tables", function(req, res){
     var newCustomer = req.body;
 
-    if (tableData.length > 5){
-        waitListData.push(newCustomer);
-    } else {
+    if (tableData.length < 5){
       tableData.push(newCustomer);
+        
+    } else {
+      waitListData.push(newCustomer);
+      
     }
     res.json(newCustomer);
 

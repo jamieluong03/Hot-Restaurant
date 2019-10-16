@@ -73,9 +73,7 @@
 
 </div>
 
-</body>
 
-</html>
 
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
@@ -105,7 +103,7 @@
 
     $.post("/api/tables", newReservation,
       function(data) {
-        if(data){
+        if( data ){
           alert("YAY!! You are officially booked!") 
         }else{
           alert("SORRY! You are on the waitlist")
@@ -127,3 +125,6 @@
   });
 
 </script>
+</body>
+
+</html>
