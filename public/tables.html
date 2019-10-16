@@ -96,7 +96,8 @@
 
   function getWaitlistData(){
     $.get("/api/waitlist", function(waitinglistData){
-      for (var k=0; k < waitinglistData.length; k++){
+
+      for (var i = 0; i < waitinglistData.length; i++){
         let waitList = $("#waitList");
         let listCustomer = $("<li class='list-group-item mt-4'>");
 
